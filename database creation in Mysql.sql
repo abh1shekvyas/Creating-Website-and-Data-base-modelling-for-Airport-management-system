@@ -1,0 +1,83 @@
+create database dbms_assignment4;
+
+use dbms_assignment4;
+
+CREATE TABLE Airports
+(
+  Airport_ID  int NOT NULL ,
+  Airport_name VARCHAR(50) NOT NULL,
+  City VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Airport_ID),
+  UNIQUE (Airport_name)
+);
+ALTER TABLE Airports MODIFY COLUMN Airport_ID  int auto_increment;
+
+
+#Employees table
+CREATE TABLE Employees
+(
+  EMP_name VARCHAR(50) NOT NULL,
+  EMP_ID INT NOT NULL,
+  AGE INT NOT NULL,
+  JOB_level VARCHAR(50) NOT NULL,
+  Salary INT NOT NULL,
+  Airport_ID int NOT NULL ,
+  PRIMARY KEY (EMP_ID)
+);
+
+-- INSERT INTO Employees(EMP_name,EMP_ID,AGE,JOB_level,Salary,Airport_ID) 
+   --  VALUES ('wer',2223,23,'r4',123234,);
+
+
+ALTER TABLE Employees MODIFY COLUMN EMP_ID INT auto_increment;
+
+
+CREATE TABLE Flights_
+(
+  Airport_name VARCHAR(50) NOT NULL,
+  Airport_arrival DATE NOT NULL,
+  Flight_no VARCHAR(50) NOT NULL,
+  PublicorPrivate VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Flight_no)
+);
+ALTER TABLE Flights_  MODIFY COLUMN Flight_no INT auto_increment;
+
+
+CREATE TABLE Airline_Companies
+(
+  Airline_ID INT NOT NULL,
+  Planes_owned INT NOT NULL,
+  Name varchar(50) NOT NULL,
+  PRIMARY KEY (Airline_ID),
+  UNIQUE (Name)
+);
+ALTER TABLE Airline_Companies  MODIFY COLUMN Airline_ID INT auto_increment;
+
+
+
+CREATE TABLE Passengers
+(
+ Customer_id VARCHAR(50) NOT NULL,
+ Address VARCHAR(50) NOT NULL,
+  Name VARCHAR(50) NOT NULL,
+  PNR VARCHAR(50) NOT NULL,
+  Flight_no VARCHAR(50) NOT NULL,
+  Airline_ID INT,
+  PRIMARY KEY (Customer_id)
+ 
+);
+
+
+
+CREATE TABLE Tickets
+(
+  Seat  VARCHAR(50)  NOT NULL,
+  Price INT NOT NULL,
+  PNR  VARCHAR(50)  NOT NULL,
+  Flight_no VARCHAR(50) NOT NULL,
+  timestamp timestamp not null,
+  PRIMARY KEY (PNR)
+);
+
+
+

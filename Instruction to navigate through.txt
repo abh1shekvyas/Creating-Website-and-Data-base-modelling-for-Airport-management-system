@@ -1,0 +1,6 @@
+Please follow below steps:
+1. Create schema and tables using the SQL query provided.
+2. Using file named "HOME PAGE.php" open the home page of our Airport Management system.
+3. Click on button below "Click below to input data". This will help you to input data.
+4. Out of the 6 tables select anyone to input the data and submit. 
+5. Click on button below "Click below to access saved data from tables". This will help you to view data.
